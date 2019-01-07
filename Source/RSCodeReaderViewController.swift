@@ -377,8 +377,8 @@ open class RSCodeReaderViewController: UIViewController, AVCaptureMetadataOutput
 	override open func viewDidDisappear(_ animated: Bool) {
 		super.viewDidDisappear(animated)
 
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.NSExtensionHostWillEnterForeground, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.NSExtensionHostDidEnterBackground, object: nil)
 		if !Platform.isSimulator {
 			self.session.stopRunning()
 		}
